@@ -12,13 +12,14 @@ const [back, setBack] = useState(false);
   const handleClick =()=>{
     setShowFun(true);
     setBack(true)
+    console.log(showFun)
   }
 
   return (
     <>
       {!back && <HelloWorld/>}
       {!back && <Button name="Don't Click" onClick={handleClick}/>}
-      {showFun && <Fun setBack={setBack}/>}
+      {showFun && <Fun setBack={setBack} setShowFun={setShowFun}/>}
     </>
   )
 }
